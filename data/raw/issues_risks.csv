@@ -1,0 +1,46 @@
+issue_id,project_id,segment_id,issue_type,category,severity,date_opened,date_closed,owner_role,description,impact_days,cost_impact_est
+ISS0001,P001,S001,Issue,Supply Chain,Medium,2025-09-09,2025-10-08,PM,Supply Chain constraint affecting delivery timeline.,2,19886
+ISS0002,P001,S002,Risk,Budget,Medium,2025-09-21,2025-09-29,Engineering,Budget constraint affecting delivery timeline.,1,5778
+ISS0003,P001,S006,Risk,Community/Regulatory,Low,2025-10-28,2025-11-09,PM,Community/Regulatory constraint affecting delivery timeline.,5,18937
+ISS0004,P001,S004,Issue,Community/Regulatory,Low,2025-09-27,2025-10-01,Engineering,Community/Regulatory constraint affecting delivery timeline.,2,21984
+ISS0005,P001,S006,Risk,Safety,Low,2025-09-09,2025-09-27,Engineering,Safety constraint affecting delivery timeline.,2,18974
+ISS0006,P001,S007,Issue,Utilities,Medium,2025-09-30,2025-10-30,Vendor,Utilities constraint affecting delivery timeline.,7,12798
+ISS0007,P001,S006,Issue,Utilities,High,2025-11-12,2025-11-25,Engineering,Utilities constraint affecting delivery timeline.,0,51989
+ISS0008,P001,S003,Risk,Permits,Low,2025-09-28,2025-10-14,PM,Permits constraint affecting delivery timeline.,2,29752
+ISS0009,P001,S007,Issue,Budget,Low,2025-11-04,2025-11-19,PM,Budget constraint affecting delivery timeline.,4,19615
+ISS0010,P001,S006,Risk,Budget,Low,2025-10-09,2025-10-30,Vendor,Budget constraint affecting delivery timeline.,5,8866
+ISS0011,P001,S006,Risk,Budget,Medium,2025-10-24,2025-11-05,PM,Budget constraint affecting delivery timeline.,4,7849
+ISS0012,P001,S003,Issue,Supply Chain,Low,2025-10-05,2025-10-13,Engineering,Supply Chain constraint affecting delivery timeline.,2,29969
+ISS0013,P001,S006,Risk,Community/Regulatory,Low,2025-11-12,2025-12-07,Engineering,Community/Regulatory constraint affecting delivery timeline.,5,12759
+ISS0014,P001,S004,Risk,Community/Regulatory,Low,2025-10-26,2025-11-06,PM,Community/Regulatory constraint affecting delivery timeline.,2,23771
+ISS0015,P001,S006,Risk,Budget,Low,2025-10-13,2025-10-17,PM,Budget constraint affecting delivery timeline.,0,34478
+ISS0016,P001,S002,Issue,Permits,Low,2025-09-08,2025-09-11,PM,Permits constraint affecting delivery timeline.,0,19304
+ISS0017,P001,S007,Risk,Supply Chain,Medium,2025-09-23,2025-10-11,Engineering,Supply Chain constraint affecting delivery timeline.,13,10369
+ISS0018,P001,S007,Issue,Supply Chain,Low,2025-10-28,2025-11-02,PM,Supply Chain constraint affecting delivery timeline.,1,33454
+ISS0019,P001,S005,Issue,Utilities,Medium,2025-10-16,2025-11-15,PM,Utilities constraint affecting delivery timeline.,3,12091
+ISS0020,P001,S008,Issue,Community/Regulatory,Low,2025-08-08,2025-08-20,Engineering,Community/Regulatory constraint affecting delivery timeline.,0,33434
+ISS0021,P001,S003,Issue,Community/Regulatory,Low,2025-09-20,2025-10-15,Engineering,Community/Regulatory constraint affecting delivery timeline.,5,5455
+ISS0022,P001,S004,Risk,Supply Chain,Medium,2025-09-13,2025-10-03,Vendor,Supply Chain constraint affecting delivery timeline.,6,17153
+ISS0023,P001,S003,Issue,Safety,Low,2025-09-21,2025-09-27,Engineering,Safety constraint affecting delivery timeline.,5,7935
+ISS0024,P001,S002,Issue,Community/Regulatory,Low,2025-09-26,2025-10-26,Vendor,Community/Regulatory constraint affecting delivery timeline.,1,18448
+ISS0025,P001,S005,Issue,Permits,Low,2025-11-07,2025-11-10,Engineering,Permits constraint affecting delivery timeline.,1,31298
+ISS0026,P001,S002,Issue,Permits,Low,2025-10-16,2025-11-12,Engineering,Permits constraint affecting delivery timeline.,4,5570
+ISS0027,P001,S005,Issue,Permits,Low,2025-10-31,2025-12-01,Vendor,Permits constraint affecting delivery timeline.,5,9529
+ISS0028,P001,S001,Issue,Utilities,Low,2025-11-24,2025-12-13,PM,Utilities constraint affecting delivery timeline.,5,9932
+ISS0029,P001,S002,Risk,Permits,Low,2025-11-07,2025-11-22,PM,Permits constraint affecting delivery timeline.,2,18355
+ISS0030,P001,S007,Issue,Supply Chain,Medium,2025-11-18,2025-11-21,Vendor,Supply Chain constraint affecting delivery timeline.,9,20386
+ISS0031,P001,S007,Risk,Utilities,High,2025-10-29,2025-11-07,PM,Utilities constraint affecting delivery timeline.,7,50332
+ISS0032,P001,S002,Risk,Community/Regulatory,Low,2025-09-02,2025-09-08,Finance,Community/Regulatory constraint affecting delivery timeline.,5,21785
+ISS0033,P001,S002,Risk,Supply Chain,Medium,2025-08-04,2025-08-17,PM,Supply Chain constraint affecting delivery timeline.,4,28539
+ISS0034,P001,S005,Issue,Supply Chain,High,2025-10-01,2025-10-18,PM,Supply Chain constraint affecting delivery timeline.,9,60619
+ISS0035,P001,S001,Issue,Utilities,High,2025-09-24,2025-10-09,Engineering,Utilities constraint affecting delivery timeline.,1,55965
+ISS0036,P001,S003,Risk,Budget,Low,2025-08-21,2025-09-01,PM,Budget constraint affecting delivery timeline.,0,2676
+ISS0037,P001,S006,Issue,Community/Regulatory,Low,2025-09-07,2025-10-11,Engineering,Community/Regulatory constraint affecting delivery timeline.,3,22794
+ISS0038,P001,S002,Issue,Community/Regulatory,Medium,2025-10-21,2025-10-26,Finance,Community/Regulatory constraint affecting delivery timeline.,3,14444
+ISS0039,P001,S001,Risk,Permits,Low,2025-08-15,2025-08-20,PM,Permits constraint affecting delivery timeline.,3,19523
+ISS0040,P001,S005,Risk,Safety,Low,2025-08-27,2025-09-10,PM,Safety constraint affecting delivery timeline.,5,15223
+ISS0041,P001,S007,Issue,Safety,Medium,2025-10-29,2025-11-01,PM,Safety constraint affecting delivery timeline.,4,3070
+ISS0042,P001,S001,Issue,Safety,High,2025-09-23,2025-09-30,Vendor,Safety constraint affecting delivery timeline.,6,66796
+ISS0043,P001,S003,Issue,Budget,Low,2025-09-24,2025-10-09,Engineering,Budget constraint affecting delivery timeline.,0,9864
+ISS0044,P001,S001,Risk,Utilities,Low,2025-08-04,2025-08-21,PM,Utilities constraint affecting delivery timeline.,1,18140
+ISS0045,P001,S007,Risk,Utilities,Low,2025-09-06,2025-09-28,Engineering,Utilities constraint affecting delivery timeline.,3,15914

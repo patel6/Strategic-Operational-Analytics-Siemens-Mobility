@@ -1,0 +1,9 @@
+segment_id,project_id,segment_name,length_km,contractor_id,region_zone
+S001,P001,Segment 1,2.62,C05,East
+S002,P001,Segment 2,3.7,C05,North
+S003,P001,Segment 3,1.97,C03,East
+S004,P001,Segment 4,1.67,C05,West
+S005,P001,Segment 5,1.93,C03,South
+S006,P001,Segment 6,1.67,C04,South
+S007,P001,Segment 7,2.14,C04,North
+S008,P001,Segment 8,3.35,C02,South

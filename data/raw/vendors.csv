@@ -1,0 +1,11 @@
+vendor_id,vendor_name,service_type,contract_rate_per_unit,unit_type,contract_start,contract_end
+V001,Vendor 1,Materials,711.44,meter,2025-08-01,2026-06-30
+V002,Vendor 2,Materials,486.63,meter,2025-08-01,2026-06-30
+V003,Vendor 3,Civil,100.89,hour,2025-08-01,2026-06-30
+V004,Vendor 4,Signaling,115.99,hour,2025-08-01,2026-06-30
+V005,Vendor 5,Civil,106.15,hour,2025-08-01,2026-06-30
+V006,Vendor 6,Signaling,111.84,hour,2025-08-01,2026-06-30
+V007,Vendor 7,Staffing,75.67,hour,2025-08-01,2026-06-30
+V008,Vendor 8,Materials,690.94,meter,2025-08-01,2026-06-30
+V009,Vendor 9,Electrical,119.11,hour,2025-08-01,2026-06-30
+V010,Vendor 10,Staffing,88.33,hour,2025-08-01,2026-06-30
