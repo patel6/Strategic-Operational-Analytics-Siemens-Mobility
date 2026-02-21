@@ -1,140 +1,129 @@
-KPI Strategy – Urban Rail Expansion Program
+Metroville Urban Rail Expansion
 
-Strategic Operational Analytics Simulation
+KPI Development Framework (Strategic Operational Analytics)
 
-This KPI framework aligns project execution with Siemens Mobility’s objectives in delivery performance, sustainability, financial integrity, and stakeholder accountability.
+This KPI framework aligns with Siemens Mobility’s project objectives across technical feasibility, sustainability, and community impact while integrating financial integrity and operational performance analytics.
 
-1. Strategic Objectives
+1️⃣ Technical Feasibility KPIs
+KPI 1
 
-The rail expansion program aims to:
+KPI Name: Track Installation Rate
 
-Deliver infrastructure on schedule
+Definition (What it measures):
+Measures the speed of rail track installation per reporting period.
 
-Control project costs and prevent revenue leakage
-
-Improve operational efficiency
-
-Ensure environmental sustainability
-
-Maintain regulatory and safety compliance
-
-2. KPI Classification Framework
-
-KPIs are categorized as:
-
-Leading KPIs – Predict future performance
-Lagging KPIs – Measure historical outcomes
-
-3. Schedule & Construction KPIs
-1. Track Installation Rate (Leading)
-
-Measures construction velocity.
-
-Formula:
+Measurement Method:
 SUM(track_installed_meters) / reporting_period_days
+Data Source: work_logs.csv
 
-Target: ≥ planned installation baseline
+Rationale:
+A leading indicator of construction momentum. Early slowdown signals downstream milestone delays.
 
-Stakeholders: Engineering, Project Management
+KPI 2
 
-2. On-Time Milestone Rate (Lagging)
+KPI Name: On-Time Milestone Completion Rate
 
-Measures schedule adherence.
+Definition:
+Percentage of milestones completed on or before planned finish date.
 
-Formula:
-Completed_On_Time / Total_Completed_Milestones × 100
+Measurement Method:
+COUNT(CASE WHEN actual_finish <= planned_finish THEN 1 END)
+/ COUNT(completed_milestones)
 
-Target: ≥ 90%
+Data Source: milestones.csv
 
-Stakeholders: Program Director, City Authority
+Rationale:
+Lagging performance metric indicating schedule adherence and execution effectiveness.
 
-3. Critical Path Delay Impact (Lagging)
+2️⃣ Environmental Sustainability KPIs
+KPI 1
 
-Total delay days for critical path milestones.
+KPI Name: Downtime Efficiency Ratio
 
-Formula:
-SUM(actual_finish − planned_finish)
-WHERE critical_path_flag = 'Y'
+Definition:
+Percentage of total working hours lost due to downtime events.
 
-4. Financial Integrity & Revenue Leakage KPIs
-4. Invoice Mismatch Rate (Leading)
+Measurement Method:
+downtime_hours / hours_worked × 100
 
-Detects billing irregularities early.
+Data Source: work_logs.csv
 
-Condition:
+Rationale:
+Identifies operational inefficiencies that may increase emissions and resource waste.
 
-billed_qty ≠ approved_qty
-OR
+KPI 2
 
-billed_rate > contract_rate
+KPI Name: Sustainability Incident Rate
 
-Formula:
-Flagged_Invoices / Total_Invoices × 100
+Definition:
+Number of safety incidents per 1,000 working hours.
 
-Target: < 5%
+Measurement Method:
+(total_safety_incidents / total_hours_worked) × 1000
 
-Stakeholders: Finance Controller
+Data Source: work_logs.csv
 
-5. Duplicate Invoice Detection (Leading)
+Rationale:
+Ensures compliance with environmental and safety regulations.
 
-Identifies duplicate billing patterns using window functions.
+3️⃣ Community Acceptance KPIs
+KPI 1
 
-Condition:
-Same vendor_id + invoice_reference + billed_amount appears more than once.
+KPI Name: Delay Reason Distribution
 
-6. Cost Variance (%) (Lagging)
+Definition:
+Distribution of delays categorized by permits, utilities, supply chain, regulatory or community-related causes.
 
-Formula:
-(Actual_Cost − Budgeted_Cost) / Budgeted_Cost
+Measurement Method:
+Percentage breakdown of delay_reason field in milestones.csv
 
-Target: Within ±3%
+Rationale:
+High regulatory/community delay share indicates stakeholder alignment challenges.
 
-7. Overbilling Amount ($) (Lagging)
+KPI 2
 
-Formula:
-SUM(billed_amount − approved_amount)
-WHERE billed_amount > approved_amount
+KPI Name: Issue Resolution Cycle Time
 
-5. Productivity & Operational Efficiency KPIs
-8. Crew Utilization Proxy (Leading)
+Definition:
+Average number of days from issue_opened to issue_closed.
 
-Formula:
-track_installed_meters / (crew_count × hours_worked)
+Measurement Method:
+AVG(date_closed − date_opened)
 
-Used to detect underperforming segments.
+Data Source: issues_risks.csv
 
-9. Downtime Ratio (%) (Leading)
+Rationale:
+Measures responsiveness to stakeholder concerns and operational disruptions.
 
-Formula:
-downtime_hours / total_hours_worked × 100
+4️⃣ Financial Integrity & Revenue Protection (Advanced Analytics Layer)
 
-Target: < 10%
+(Extension beyond basic template to support financial oversight)
 
-10. Rework Rate (%) (Lagging)
+KPI 1
 
-Formula:
-rework_hours / total_hours_worked × 100
+KPI Name: Invoice Mismatch Rate
 
-High rework correlates with quality issues.
+Definition:
+Percentage of invoices where billed rate exceeds contract rate OR billed quantity exceeds approved quantity.
 
-6. Sustainability & Compliance KPIs
-11. Incident Rate (Lagging)
+Measurement Method:
+Computed using SQL CTE-based audit logic.
 
-Formula:
-(total_incidents / total_hours_worked) × 1000
+Data Source: invoices.csv + vendors.csv
 
-12. Delay Reason Distribution (Diagnostic KPI)
+Rationale:
+Leading indicator of potential revenue leakage.
 
-Tracks distribution across:
+KPI 2
 
-Permits
+KPI Name: Duplicate Invoice Detection
 
-Supply chain
+Definition:
+Invoices sharing same vendor_id + invoice_reference + billed_amount.
 
-Weather
+Measurement Method:
+Window Function:
+COUNT(*) OVER (PARTITION BY vendor_id, invoice_reference, billed_amount)
 
-Labor
-
-Community / regulatory
-
-Used for root cause prioritization.
+Rationale:
+Prevents financial leakage and contract non-compliance.
