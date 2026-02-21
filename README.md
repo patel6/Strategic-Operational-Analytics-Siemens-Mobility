@@ -27,3 +27,7 @@ Duplicate and rate mismatch patterns suggest need for tighter AP validation.
 Average track installation rate: ~2,165 meters/week.
 
 Downtime ratio overall: ~8%.
+
+## Executive Dashboard Preview
+
+![Executive Overview](assets/executive_overview.png)
