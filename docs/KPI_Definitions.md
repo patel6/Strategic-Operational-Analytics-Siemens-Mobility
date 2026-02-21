@@ -1,56 +1,67 @@
-KPI Definitions – Strategic Operational Analytics
+KPI Strategy – Urban Rail Expansion Program
 
-Urban Rail Expansion Simulation
+Strategic Operational Analytics Simulation
 
-This document defines the key performance indicators (KPIs) used to evaluate schedule performance, financial integrity, productivity, and safety across the rail expansion program.
+This KPI framework aligns project execution with Siemens Mobility’s objectives in delivery performance, sustainability, financial integrity, and stakeholder accountability.
 
-1. Schedule & Delivery KPIs
-On-Time Milestone Rate (%)
+1. Strategic Objectives
 
-Definition:
-Percentage of completed milestones delivered on or before planned finish date.
+The rail expansion program aims to:
 
-Formula:
-Completed_On_Time / Total_Completed_Milestones * 100
+Deliver infrastructure on schedule
 
-Business Goal:
-Maintain > 90% on-time completion rate.
+Control project costs and prevent revenue leakage
 
-Schedule Variance (%)
+Improve operational efficiency
 
-Definition:
-Difference between planned progress and actual progress.
+Ensure environmental sustainability
 
-Formula:
-(Planned_Progress_% − Actual_Progress_%)
+Maintain regulatory and safety compliance
 
-Positive = Behind schedule
-Negative = Ahead of schedule
+2. KPI Classification Framework
 
-Critical Path Delay Impact (Days)
+KPIs are categorized as:
 
-Definition:
-Total delay days for milestones flagged as critical path.
+Leading KPIs – Predict future performance
+Lagging KPIs – Measure historical outcomes
+
+3. Schedule & Construction KPIs
+1. Track Installation Rate (Leading)
+
+Measures construction velocity.
 
 Formula:
-SUM(Actual_Finish − Planned_Finish)
-WHERE Critical_Path_Flag = 'Y'
+SUM(track_installed_meters) / reporting_period_days
 
-2. Financial Integrity & Revenue Leakage KPIs
-Cost Variance (%)
+Target: ≥ planned installation baseline
 
-Definition:
-Variance between actual spend and budgeted spend.
+Stakeholders: Engineering, Project Management
+
+2. On-Time Milestone Rate (Lagging)
+
+Measures schedule adherence.
 
 Formula:
-(Actual_Cost − Budgeted_Cost) / Budgeted_Cost
+Completed_On_Time / Total_Completed_Milestones × 100
 
-Invoice Mismatch Rate (%)
+Target: ≥ 90%
 
-Definition:
-Percentage of invoices where billed values do not match approved values.
+Stakeholders: Program Director, City Authority
 
-Conditions:
+3. Critical Path Delay Impact (Lagging)
+
+Total delay days for critical path milestones.
+
+Formula:
+SUM(actual_finish − planned_finish)
+WHERE critical_path_flag = 'Y'
+
+4. Financial Integrity & Revenue Leakage KPIs
+4. Invoice Mismatch Rate (Leading)
+
+Detects billing irregularities early.
+
+Condition:
 
 billed_qty ≠ approved_qty
 OR
@@ -58,85 +69,72 @@ OR
 billed_rate > contract_rate
 
 Formula:
-Flagged_Invoices / Total_Invoices * 100
+Flagged_Invoices / Total_Invoices × 100
 
-Duplicate Invoice Indicator
+Target: < 5%
 
-Definition:
-Invoices with identical:
+Stakeholders: Finance Controller
 
-vendor_id
+5. Duplicate Invoice Detection (Leading)
 
-invoice_reference
+Identifies duplicate billing patterns using window functions.
 
-billed_amount
+Condition:
+Same vendor_id + invoice_reference + billed_amount appears more than once.
 
-Detected using SQL window functions.
+6. Cost Variance (%) (Lagging)
 
-Overbilling Amount ($)
+Formula:
+(Actual_Cost − Budgeted_Cost) / Budgeted_Cost
 
-Definition:
-Total amount billed above approved values.
+Target: Within ±3%
+
+7. Overbilling Amount ($) (Lagging)
 
 Formula:
 SUM(billed_amount − approved_amount)
 WHERE billed_amount > approved_amount
 
-3. Productivity & Operational Efficiency KPIs
-Track Installation Rate (meters/day)
-
-Definition:
-Average track installed per working day.
+5. Productivity & Operational Efficiency KPIs
+8. Crew Utilization Proxy (Leading)
 
 Formula:
-SUM(track_installed_meters) / COUNT(DISTINCT work_date)
+track_installed_meters / (crew_count × hours_worked)
 
-Crew Utilization Proxy
+Used to detect underperforming segments.
 
-Definition:
-Productivity per crew-hour.
-
-Formula:
-track_installed_meters / (crew_count * hours_worked)
-
-Downtime Ratio (%)
-
-Definition:
-Percentage of total working hours lost due to downtime.
+9. Downtime Ratio (%) (Leading)
 
 Formula:
-downtime_hours / total_hours_worked * 100
+downtime_hours / total_hours_worked × 100
 
-Rework Rate (%)
+Target: < 10%
 
-Definition:
-Percentage of hours spent on rework activities.
-
-Formula:
-rework_hours / total_hours_worked * 100
-
-4. Safety & Sustainability KPIs
-Incident Rate
-
-Definition:
-Number of safety incidents per 1,000 work hours.
+10. Rework Rate (%) (Lagging)
 
 Formula:
-(total_incidents / total_hours_worked) * 1000
+rework_hours / total_hours_worked × 100
 
-Delay Reason Distribution
+High rework correlates with quality issues.
 
-Definition:
-Percentage breakdown of delay causes:
+6. Sustainability & Compliance KPIs
+11. Incident Rate (Lagging)
+
+Formula:
+(total_incidents / total_hours_worked) × 1000
+
+12. Delay Reason Distribution (Diagnostic KPI)
+
+Tracks distribution across:
 
 Permits
 
-Supply Chain
+Supply chain
 
 Weather
 
 Labor
 
-Community / Regulatory
+Community / regulatory
 
-Used for root cause bottleneck analysis.
+Used for root cause prioritization.
