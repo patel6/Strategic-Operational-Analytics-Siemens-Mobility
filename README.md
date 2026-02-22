@@ -1,5 +1,14 @@
-# Strategic-Operational-Analytics-Siemens-Mobility
-Siemens Mobility-style operational analytics project combining KPI dashboarding (Tableau), SQL-based revenue leakage audits, and productivity bottleneck analysis for an urban rail expansion simulation.
+## Project Overview
+
+This project simulates an end-to-end operational analytics solution for a Siemens Mobility urban rail expansion program. 
+
+It integrates schedule performance, operational efficiency, and financial audit logic to identify:
+
+- Revenue leakage at the vendor level  
+- Segment-level productivity bottlenecks  
+- Schedule adherence risks  
+
+The solution combines advanced SQL (CTEs, window functions), Python-based data generation, and Tableau dashboards to support executive decision-making.
 
 Key Findings
 1️⃣ Schedule Performance
