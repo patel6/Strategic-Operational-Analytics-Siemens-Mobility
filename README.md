@@ -11,6 +11,8 @@ It integrates schedule performance, operational efficiency, and financial audit 
 The solution combines advanced SQL (CTEs, window functions), Python-based data generation, and Tableau dashboards to support executive decision-making.
 
 Key Findings
+
+
 1️⃣ Schedule Performance
 
 75% of milestones were completed on time.
